@@ -1,4 +1,19 @@
 -- Grassland
+
+minetest.unregister_biome("grassland_under")
+
+minetest.register_biome({
+               name = "grassland_under",
+               node_cave_liquid = {"default:water_source", "default:lava_source"},
+               node_dungeon = "default:cobble",
+               node_dungeon_alt = "default:mossycobble",
+               node_dungeon_stair = "stairs:stair_cobble",
+	y_max = -256,
+	y_min = -28999,
+	heat_point = 50,
+	humidity_point = 35,
+})
+
 minetest.register_biome({
                name = "underground_grassland",
                node_stone = "new_biomes:glowing_dirt",
@@ -8,11 +23,26 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 vertical_blend = 10,
-                heat_point = 57,
-                humidity_point = 40,
+                heat_point = 50,
+                humidity_point = 35,
 })
 
 --Deciduous Forest
+
+minetest.unregister_biome("deciduous_forest_under")
+
+minetest.register_biome({
+               name = "deciduous_forest_under",
+               node_cave_liquid = {"default:water_source", "default:lava_source"},
+               node_dungeon = "default:cobble",
+               node_dungeon_alt = "default:mossycobble",
+               node_dungeon_stair = "stairs:stair_cobble",
+               y_max = -256,
+               y_min = -28999,
+               heat_point = 60,
+               humidity_point = 68,
+})
+
 minetest.register_biome({
                name = "underground_deciduous_forest",
                node_stone = "new_biomes:glowing_dirt",
@@ -23,11 +53,11 @@ minetest.register_biome({
                y_min = -31000,
                y_max = -29000,
                heat_point = 60,
-               humidity_point = 62,
+               humidity_point = 68,
 })
 
 minetest.register_decoration({
-                name = "new_biomes:grassland_floor",
+                name = "new_biomes:plain_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
@@ -41,6 +71,21 @@ minetest.register_decoration({
 })
                
 --Sandstone Desert
+
+minetest.unregister_biome("sandstone_desert_under")
+
+minetest.register_biome({
+		name = "sandstone_desert_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -28999,
+		heat_point = 60,
+		humidity_point = 0,
+})
+
 minetest.register_biome({
                name = "underground_sandstone_desert",
                node_stone = "new_biomes:glowing_sandstone",
@@ -50,7 +95,7 @@ minetest.register_biome({
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 90,
+               heat_point = 60,
                humidity_point = 0,
 })
 
@@ -69,6 +114,21 @@ minetest.register_decoration({
 })
 
 --Desert
+
+minetest.unregister_biome("desert_under")
+
+minetest.register_biome({
+		name = "desert_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -28999,
+		heat_point = 92,
+		humidity_point = 16,
+})
+
 minetest.register_biome({
                name = "underground_desert",
                node_stone = "new_biomes:glowing_desert_sandstone",
@@ -77,8 +137,8 @@ minetest.register_biome({
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 93,
-               humidity_point = 0,
+               heat_point = 92,
+               humidity_point = 16,
 })
 
 minetest.register_decoration({
@@ -109,6 +169,21 @@ minetest.register_decoration({
 })
 
 --Cold Desert
+
+minetest.unregister_biome("cold_desert_under")
+
+minetest.register_biome({
+		name = "cold_desert_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -28999,
+		heat_point = 40,
+		humidity_point = 0,
+})
+
 minetest.register_biome({
                name = "underground_cold_desert",
                node_stone = "new_biomes:glowing_silver_sandstone",
@@ -117,7 +192,7 @@ minetest.register_biome({
                y_max = -29000,
                y_min = -30912,
                vertical_blend = 10,
-               heat_point = 45,
+               heat_point = 40,
                humidity_point = 0,
 })
 
@@ -135,7 +210,50 @@ minetest.register_decoration({
 		flags = "all_floors,force_placement",
 })
 
+--Taiga
+
+minetest.unregister_biome("taiga_under")
+
+minetest.register_biome({
+		name = "taiga_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -28999,
+		heat_point = 25,
+		humidity_point = 70,
+})
+
+minetest.register_biome({
+	name = "underground_taiga",
+	node_stone = "new_biomes:glowing_dirt",
+                node_cave_liquid = {"default:river_water_source"},
+                node_dungeon_stair = "new_biomes:gdws",
+                node_dungeon = "new_biomes:glowing_dirt",
+	y_max = -29000,
+	y_min = -31000,
+	heat_point = 25,
+	humidity_point = 70,
+})
+
 --Snowy Grassland
+
+minetest.unregister_biome("snowy_grassland_under")
+
+minetest.register_biome({
+		name = "snowy_grassland_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -28999,
+		heat_point = 20,
+		humidity_point = 35,
+})
+
 minetest.register_biome({
                name = "underground_snowy_grassland",
                node_stone = "new_biomes:glowing_dirt",
@@ -146,16 +264,16 @@ minetest.register_biome({
                 y_min = -31000,
                 vertical_blend = 10,
                 heat_point = 20,
-                humidity_point = 40,
+                humidity_point = 35,
 })
 
 minetest.register_decoration({
-                name = "new_biomes:snowy_grassland_floor",
+                name = "new_biomes:cold_floor",
 		deco_type = "simple",
 		place_on = {"new_biomes:glowing_dirt"},
 		sidelen = 16,
                 fill_ratio = 10,
-		biomes = {"underground_snowy_grassland"},
+		biomes = {"underground_snowy_grassland", "underground_taiga"},
 		y_max = -29000,
 		y_min = -30910,
 		decoration = "new_biomes:gdws",
@@ -164,6 +282,21 @@ minetest.register_decoration({
 })
 
 --Permafrost Tundra
+
+minetest.unregister_biome("tundra_under")
+
+minetest.register_biome({
+		name = "tundra_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -28999,
+		heat_point = 0,
+		humidity_point = 40,
+})
+
 minetest.register_biome({
                name = "underground_tundra_with_permafrost",
                node_stone = "new_biomes:glowing_permafrost",
@@ -191,6 +324,21 @@ minetest.register_decoration({
 })
 
 --Glacier
+
+minetest.unregister_biome("icesheet_under")
+
+minetest.register_biome({
+               name = "icesheet_under",
+               node_cave_liquid = {"default:water_source", "default:lava_source"},
+               node_dungeon = "default:cobble",
+               node_dungeon_alt = "default:mossycobble",
+               node_dungeon_stair = "stairs:stair_cobble",
+               y_max = -256,
+               y_min = -28999,
+               heat_point = 0,
+               humidity_point = 73,
+})
+
 minetest.register_biome({
                name = "underground_glacier",
                node_stone = "new_biomes:glowing_ice",
@@ -200,7 +348,7 @@ minetest.register_biome({
                 y_max= -29000,
                 y_min = -31000,
                 heat_point = 0,
-                humidity_point = 79,
+                humidity_point = 73,
 })
 
 minetest.register_decoration({
